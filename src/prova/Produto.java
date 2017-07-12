@@ -10,16 +10,40 @@ package prova;
  * @author elvis
  */
 public class Produto {
-    
-    
-    String marca;
-    String nome;
-    int volume;
-    double valorCompra;
-    
-    double valorVenda;
-    double valorLitro;
 
+ 
+    
+    
+    private String marca;
+    private String nome;
+    private int volume;
+    private double valorCompra;
+    
+    private double valorVenda;
+    private double valorLitro;
+    private double valorCaixa;
+    
+    Produto(){
+        
+    }
+    Produto(double valorCaixa, String nome, int volume){
+       setValorCaixa(valorCaixa);
+       setNome(nome);
+       setVolume(volume);
+       
+        
+    }
+
+    
+       public double getValorCaixa() {
+        return valorCaixa;
+    }
+
+    public void setValorCaixa(double valorCaixa) {
+        this.valorCaixa = valorCaixa;
+    }
+    
+    
     public String getMarca() {
         return marca;
     }
@@ -70,16 +94,4 @@ public class Produto {
     
     
     
-    
-    public void AdcionarProdEstoque(){ //comprar
-        
-    }
-    
-    public void PesquisarProd(){ // pesquisar a disponibilidade de produto
-        
-    }
-    
-    public void VenderProd(){ // vender produtos
-        
-    }
 }

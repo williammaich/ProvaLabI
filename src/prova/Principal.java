@@ -13,18 +13,16 @@ import java.util.Scanner;
  * @author elvis
  */
 public class Principal {
-    
+
     public static Scanner input = new Scanner(System.in);
     public static ArrayList<String> mercado = new ArrayList();
-    
+
     public static void main(String[] args) {
         int opcao;
-        
-        
+
         Produto me = new Produto();
-        
-        
-        while(true){
+
+        while (true) {
             System.out.println("========================");
             System.out.println("=====Bar do Mussum======");
             System.out.println("========================");
@@ -34,20 +32,20 @@ public class Principal {
             System.out.println("5. Finalizar: ");
             System.out.println("Opção: ");
             opcao = input.nextInt();
-            
+
             input.nextLine();
-                
-            switch(opcao){
+
+            switch (opcao) {
                 case 1:
-                    me.AdcionarProdEstoque();
+                    AdcionarProdEstoque();
                     break;
-                    
+
                 case 2:
-                    me.PesquisarProd();
+                    PesquisarProd();
                     break;
-                    
+
                 case 3:
-                    me.VenderProd();
+                    VenderProd();
                     break;
                 case 4:
                     break;
@@ -55,6 +53,21 @@ public class Principal {
                     System.out.println("Opçao invalida. ");
             }
         }
+
     }
-    
+
+    public static void AdcionarProdEstoque() {
+        System.out.println("Produto: ");
+        String nome = input.nextLine();
+        mercado.add(nome);
+        System.out.println("Cadastrado...");
+    }
+
+    public static void PesquisarProd() {
+
+    }
+
+    public static void VenderProd() {
+
+    }
 }
