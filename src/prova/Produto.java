@@ -27,7 +27,7 @@ public class Produto {
         
     }
     Produto(double valorCaixa, String nome, int volume){
-       setValorCaixa(valorCaixa);
+       setValorCaixa(1000.00);
        setNome(nome);
        setVolume(volume);
        

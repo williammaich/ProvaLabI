@@ -16,7 +16,8 @@ public class Principal {
 
     public static Scanner input = new Scanner(System.in);
     public static ArrayList<String> mercado = new ArrayList();
-
+    public static ArrayList<Double> preco = new ArrayList();
+    
     public static void main(String[] args) {
         int opcao;
 
@@ -58,16 +59,36 @@ public class Principal {
 
     public static void AdcionarProdEstoque() {
         System.out.println("Produto: ");
+        
         String nome = input.nextLine();
         mercado.add(nome);
+        System.out.println("Informe o preço: ");
+        double prec = input.nextInt();
+        preco.add(prec);
+        
         System.out.println("Cadastrado...");
     }
 
     public static void PesquisarProd() {
-
+        int conta = 0;
+        System.out.println();
+        System.out.println("Digite o produto para pesquisar: ");
+        String prod = input.nextLine();
+   
+        System.out.println("Lista de produtos: ");
+        System.out.println("-------------------");
+        for (int i = 0; i < mercado.size(); i++) {
+         
+            System.out.println(mercado.get(i));
+        }
     }
 
     public static void VenderProd() {
-
+        System.out.println("Informe o produto a ser vendido: ");
+        String prod = input.nextLine();
+        
+       // String tam = mercado.size();
+        
+      
     }
 }
