@@ -5,6 +5,8 @@
  */
 package prova;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author elvis
@@ -23,14 +25,27 @@ public class Produto {
     private double valorLitro;
     private double valorCaixa;
     
+    public static ArrayList<String> mercado;
+    public static ArrayList<Double> preco;
+    
+    
     Produto(){
         
     }
+    
+    Produto(String nome, Double valorCompra){
+        setNome(nome);
+        setValorCompra(valorCompra);
+       mercado = new ArrayList();
+       preco = new ArrayList();
+    }
+    
     Produto(double valorCaixa, String nome, int volume){
        setValorCaixa(1000.00);
        setNome(nome);
        setVolume(volume);
-       
+       mercado = new ArrayList();
+       preco = new ArrayList();
         
     }
 
@@ -91,6 +106,23 @@ public class Produto {
     public void setValorLitro(double valorLitro) {
         this.valorLitro = valorLitro;
     }
+
+    public static ArrayList<String> getMercado() {
+        return mercado;
+    }
+
+    public static void setMercado(ArrayList<String> mercado) {
+        Produto.mercado = mercado;
+    }
+
+    public static ArrayList<Double> getPreco() {
+        return preco;
+    }
+
+    public static void setPreco(ArrayList<Double> preco) {
+        Produto.preco = preco;
+    }
+    
     
     
     
