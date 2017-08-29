@@ -24,6 +24,7 @@ public class Produto {
     private double valorVenda;
     private double valorLitro;
     private double valorCaixa;
+    private int quantidade;
     
     public static ArrayList<String> mercado;
     public static ArrayList<Double> preco;
@@ -33,9 +34,10 @@ public class Produto {
         
     }
     
-    Produto(String nome, Double valorCompra){
+    Produto(String nome, Double valorCompra, int quantidade){
         setNome(nome);
         setValorCompra(valorCompra);
+        setQuantidade(quantidade);
        mercado = new ArrayList();
        preco = new ArrayList();
     }
@@ -121,6 +123,14 @@ public class Produto {
 
     public static void setPreco(ArrayList<Double> preco) {
         Produto.preco = preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
     
     
